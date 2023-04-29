@@ -14,7 +14,7 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "open-in-vs-code-online",
+				"command": "open-in-vscode-online.openInVSCodeOnline",
 				"title": "Open in VS Code Online"
 			}
 		]
