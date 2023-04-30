@@ -19,14 +19,6 @@
 			{
 				"command": "open-in-vscode-online.openInVSCodeOnline",
 				"title": "Open in VS Code Online"
-			},
-			{
-				"command": "open-in-vscode-online.listGitBranches",
-				"title": "List Git Branches"
-			},
-			{
-				"command": "open-in-vscode-online.showGitOriginUrl",
-				"title": "Show Git Origin Url"
 			}
 		]
 	},
