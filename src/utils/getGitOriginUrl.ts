@@ -1,7 +1,7 @@
-import { getTerminalOutputForCommandPrompt } from './getTerminalOutputForCommandPrompt';
+import { getPromptOutputInCurrentWorkspace } from './getPromptOutputInCurrentWorkspace';
 
-export function getGitOriginUrl() {
-	return getTerminalOutputForCommandPrompt('git config --get remote.origin.url').then((url) =>
-		url?.replace('.git', '')?.trim()
-	);
+export async function getGitOriginUrl() {
+	const output = await getPromptOutputInCurrentWorkspace('git', ['config', '--get', 'remote.origin.url']);
+
+	return (output || [''])[0]?.replace('.git', '')?.trim();
 }
