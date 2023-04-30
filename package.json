@@ -1,6 +1,7 @@
 {
 	"name": "open-in-vs-code-online",
 	"displayName": "Open in VS Code Online",
+	"publisher": "subinsebastian",
 	"description": "The extension allows you to quickly open your current Git repository in the browser in either `vscode.dev` or `github.dev` environment.",
 	"repository": {
 		"url": "https://github.com/subinsebastian/open-in-vs-code-online.git"
