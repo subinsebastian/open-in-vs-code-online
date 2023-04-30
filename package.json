@@ -6,7 +6,7 @@
 	"repository": {
 		"url": "https://github.com/subinsebastian/open-in-vs-code-online.git"
 	},
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.77.0"
 	},
@@ -51,7 +51,10 @@
 		"test": "node ./out/test/runTest.js",
 		"format:check": "prettier ./ -c",
 		"format:fix": "prettier ./ -w",
-		"format:fix-staged": "prettier --write --ignore-unknown"
+		"format:fix-staged": "prettier --write --ignore-unknown",
+		"vsce:package": "vsce package",
+		"vsce:publish": "vsce publish",
+		"vsce:release": "npm run vsce:package && npm run vsce:publish"
 	},
 	"devDependencies": {
 		"@types/glob": "^8.1.0",
