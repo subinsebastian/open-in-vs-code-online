@@ -2,6 +2,10 @@
 
 This is a VS Code extension that allows you to quickly open your current Git repository in the browser in VS Code Web. You can choose to open it in either the `vscode.dev` or `github.dev` environment by modifying the `openInVSCodeOnline.defaultVSCodeOnlineEnvironment` setting.
 
+## Watch Demo
+
+<img src="./assets/demo.gif" alt="Demo GIF">
+
 ## Installation
 
 To install the extension, follow these steps:

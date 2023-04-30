@@ -6,11 +6,11 @@
 	"repository": {
 		"url": "https://github.com/subinsebastian/open-in-vs-code-online.git"
 	},
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.77.0"
 	},
-	"icon": "icon.png",
+	"icon": "assets/icon.png",
 	"categories": [
 		"Other",
 		"SCM Providers"
@@ -53,8 +53,7 @@
 		"format:fix": "prettier ./ -w",
 		"format:fix-staged": "prettier --write --ignore-unknown",
 		"vsce:package": "vsce package",
-		"vsce:publish": "vsce publish",
-		"vsce:release": "npm run vsce:package && npm run vsce:publish"
+		"vsce:publish": "vsce publish"
 	},
 	"devDependencies": {
 		"@types/glob": "^8.1.0",
