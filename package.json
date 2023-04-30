@@ -1,7 +1,7 @@
 {
 	"name": "open-in-vs-code-online",
 	"displayName": "Open in VS Code Online",
-	"description": "Just one command and you open your ",
+	"description": "The extension allows you to quickly open your current Git repository in the browser in either `vscode.dev` or `github.dev` environment.",
 	"repository": {
 		"url": "https://github.com/subinsebastian/open-in-vs-code-online.git"
 	},
@@ -10,7 +10,8 @@
 		"vscode": "^1.77.0"
 	},
 	"categories": [
-		"Other"
+		"Other",
+		"SCM Providers"
 	],
 	"activationEvents": [],
 	"main": "./dist/extension.js",
@@ -20,7 +21,21 @@
 				"command": "open-in-vscode-online.openInVSCodeOnline",
 				"title": "Open in VS Code Online"
 			}
-		]
+		],
+		"configuration": {
+			"title": "Open in VS Code Online",
+			"properties": {
+				"openInVSCodeOnline.defaultVSCodeOnlineEnvironment": {
+					"type": "string",
+					"default": "vscode.dev",
+					"description": "The default VS Code online environment to use",
+					"enum": [
+						"vscode.dev",
+						"github.dev"
+					]
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run package",
@@ -57,8 +72,5 @@
 	},
 	"lint-staged": {
 		"**/*": "npm run format:fix-staged"
-	},
-	"dependencies": {
-		"simple-git": "^3.18.0"
 	}
 }

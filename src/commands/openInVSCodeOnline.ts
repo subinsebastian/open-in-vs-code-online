@@ -1,15 +1,17 @@
+import { CONFIGS } from '../constants/configs.constant';
 import { Command } from '../types';
-import { getGitOriginUrl, openLinkInBrowser } from '../utils';
+import { getGitOriginUrl, getWorkspaceConfigurations, openLinkInBrowser } from '../utils';
 
 export function openInVSCodeOnlineCommand(): Command {
-	const vscodeOnlineEnv: 'https://github.dev' | 'https://vscode.dev' = 'https://github.dev';
-
 	return {
 		name: 'open-in-vscode-online.openInVSCodeOnline',
 
 		handler: async () => {
+			const defaultVSCodeOnlineEnvironment = getWorkspaceConfigurations()['defaultVSCodeOnlineEnvironment'];
+			const env = CONFIGS['defaultVSCodeOnlineEnvironment'][defaultVSCodeOnlineEnvironment];
+
 			const originUrl = await getGitOriginUrl();
-			const gotoUrl = originUrl?.replace('https://github.com', vscodeOnlineEnv)?.trim();
+			const gotoUrl = originUrl?.replace('https://github.com', env)?.trim();
 
 			openLinkInBrowser(gotoUrl);
 		},

@@ -19,7 +19,6 @@ export function getPromptOutputInCurrentWorkspace(command: string, args: string[
 	// Collect the output
 	let output = '';
 	gitConfigProcess.stdout.on('data', (data) => {
-		console.log({ str: data.toString() });
 		output += data.toString();
 	});
 
