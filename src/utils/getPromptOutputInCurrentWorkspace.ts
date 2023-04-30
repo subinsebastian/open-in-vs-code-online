@@ -11,7 +11,7 @@ export function getPromptOutputInCurrentWorkspace(command: string, args: string[
 		return;
 	}
 
-	// Run the 'git config --get remote.origin.url' command
+	// Run the command
 	const gitConfigProcess = childProcess.spawn(command, args, {
 		cwd: workspaceFolder.uri.fsPath,
 	});
